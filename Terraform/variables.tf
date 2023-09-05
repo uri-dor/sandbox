@@ -2,7 +2,7 @@
 variable "vpc_name" {
   description = "The vpc name"
   type        = string
-  default     = "sandbox-vpc"
+  default     = "playbox-vpc"
 }
 
 variable "vpc_cidr" {
@@ -81,7 +81,7 @@ variable "public_subnet_tags" {
   type        = map(string)
   default = {
     Tier2 = "public",
-    Tier = "sandbox"
+    Tier = "playbox"
   }
 }
 
@@ -90,7 +90,7 @@ variable "public_route_table_tags" {
   type        = map(string)
   default = {
     Tier2 = "public",
-    Tier = "sandbox"
+    Tier = "playbox"
   }
 }
 
@@ -123,7 +123,7 @@ variable "private_subnet_tags" {
   type        = map(string)
   default = {
     Tier2 = "private",
-    Tier = "sandbox",
+    Tier = "playbox",
     Keep = true,
     Owner = "uri"
   }
@@ -134,7 +134,7 @@ variable "private_route_table_tags" {
   type        = map(string)
   default = {
     Tier2 = "private",
-    Tier = "sandbox",
+    Tier = "playbox",
     Keep = true,
     Owner = "uri"
   }
@@ -180,7 +180,7 @@ variable "vpc_tags" {
   description = "Additional tags for the deployed resources"
   type        = map(string)
   default     = {
-    Tier = "sandbox",
+    Tier = "playbox",
     Keep = true,
     Owner = "uri"
   }
